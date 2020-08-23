@@ -1,0 +1,129 @@
+<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Corona Kit-All Products(user)</title>
+</head>
+<body>
+<jsp:include page="header.jsp"/>
+<hr/>
+             <label>Select product:</label>
+             <select id = "myList">
+               <option value = "1">Face mask</option>
+               <option value = "2">Sanitizers</option>
+               <option value = "3">immunity boosters</option>
+               <option value = "4">gloves</option>
+                <option value = "5">medicines</option>
+             </select>
+		<button>SAVE</button>		
+	</form>
+</body>
+</html>
+
+<hr/>	
+
+	<c:choose>
+		<c:when test="${items==null || items.isEmpty() }">
+			<p>No Items Found</p>
+		</c:when>
+		<c:otherwise>
+			<table border="1" cellspacing="5px" cellpadding="5px">
+				<tr>
+					<th>Id</th>
+					<th>personName</th>
+					<th>email</th>
+					<th>contactNumbere</th>
+					<th>totalAmount</th>
+					<th>deliveryAddress</th>
+					<th>orderDate</th>
+					<th>orderFinalized</th>
+				</tr>
+				
+				<c:forEach items="${items }" var="item">
+					<tr>
+					<td>${item.id }</td>
+					<td>${item.personName }</td>
+					<td>${item.email }</td>
+					<td>${item.contactNumber }</td>
+					<td>${item.totalAmount }</td>
+					<td>${item.deliveryAddress }</td>
+					<td>${item.orderDate }</td>
+					<td>${item.orderFinalized }</td>
+					<td>
+						<a href="deleteItem?icode=${item.id }">DELETE</a> <span>|</span>
+						<a href="editItem?icode=${item.id}">EDIT</a> <span>|</span>
+						<a href="addItem?icode=${item.id }">ADD</a> <span>|</span>
+					</td>
+				</tr>				
+				</c:forEach>
+			</table>
+		</c:otherwise>
+	</c:choose>
+</body>
+</html>
+	<jsp:include page="footer.jsp"/>
+</body>
+</html>
+ --%>
+
+
+
+
+
+
+
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
+
+// Initialize the array of available products.
+    Item[] catalog = new Item[] {
+        new Item("X-1", "Jet Plane", 2999999.95, 1),
+        new Item("GWU-123876345-27B/6",
+            "Graphite Writing Utensil", 12000.00, 12),
+        new Item("BCT-12", "Bionic Cat Tongue", 3700.00, 1),
+        new Item("EZ-1", "Professional Electronic Zither",
+            699.95, 1),
+        new Item("PF-101", "Pink Flamingo", 12.00, 1),
+        new Item("LOD-7", "Lump Of Dirt (Medium)", 1.00, 1)
+    };
+
+%>
+
+<a href="/shoppingcart/ViewShoppingCart.jsp">View Shopping Cart</a>
+<p>
+<h1>Available Products</h1>
+<table border="1">
+<tr><th>Description</th><th>Quantity</th><th>Price</th></tr>
+
+
+// Get a currency formatter for showing the price.
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
+
+    for (int i=0; i < catalog.length; i++)
+    {
+        Item item = catalog[i];
+
+// Create the URL for adding the item to the shopping cart.
+        String addItemURL =
+            "/shoppingcart/AddToShoppingCartServlet?"+
+            "productCode="+URLEncoder.encode(item.getProductCode())+
+            "&description="+URLEncoder.encode(item.getDescription())+
+            "&quantity="+URLEncoder.encode(""+item.getQuantity())+
+            "&price="+URLEncoder.encode(""+item.getPrice());
+
+<tr><td><%=item.getDescription()%></td><td><%=item.getQuantity()%>
+    </td><td><%=item.getPrice()%></td>
+<td><a href="<%=addItemURL%>">Add to Shopping Cart</a></td></tr>
+
+</table>
+</body>
+</html>

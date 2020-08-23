@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="com.wellsafrgo.fsd.ims.dao.ItemDaojdbcImpl"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.wellsfargo.fsd.ims.service.ItemServiceImpl"/>
+<fullyQualifiedTypeName name="com.wellsfargo.fsd.ims.entity.Item"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.fokeswagon.fsd.dao.Enquiry"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebInitParam"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="com.fokeswagon.fsd.exception.SalesException"/>
+<fullyQualifiedTypeName name="com.wellsfrago.fsd.ims.exception.ImsException"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.dao.ProductDaoImpl"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.model.ProductMaster"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.corona.Exception.CMSException"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="javax.naming.NamingException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.dao.VisitorDaoImpl"/>
+<fullyQualifiedTypeName name="com.iiht.evalution.coronakit.service.OperationService"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.model.KitDetail"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.model.VisitorKit"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="org.apache.catalina.User"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.model.AdminDetails"/>
+<fullyQualifiedTypeName name="com.iiht.evaluation.coronokit.model.UserDetails"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

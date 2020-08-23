@@ -1,0 +1,21 @@
+INDEX VERSION 1.131
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2350428431.index
+\Coronakit\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3897208134.index
+\CoronakitManagementPortal\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3118867939.index
+\Mvcdemonew\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562312387.index
+\InventoryManagementPortal\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2557950323.index
+\JavaWeb1\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3158367365.index
+\sba1-coronakit-master\src\main\java
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\793005676.index
+\javaWeb2MVCDemo\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1606477181.index
+\CoronakitManagementPortal\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4148266745.index
+\InventoryManagementPortal\src
+C:\Users\wellsfargofsd19\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2224792566.index
+\MVCprojectDEmo\src

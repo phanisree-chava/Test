@@ -1,0 +1,69 @@
+package com.iiht.evaluation.coronokit.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.iiht.evaluation.corona.Exception.CMSException;
+import com.iiht.evaluation.coronokit.dao.UserDetailsDAO;
+import com.iiht.evaluation.coronokit.model.ProductMaster;
+import com.iiht.evaluation.coronokit.model.UserDetails; 
+
+/*@WebServlet("/admin")
+public class AdminController extends HttpServlet {
+	private static final long serialVersionUID = 1L;*/
+
+	
+	
+	@WebServlet("/login")
+	public class AdminController  extends HttpServlet {
+	    private static final long serialVersionUID = 1L;
+		/*
+		 * public UserLoginServlet() { super(); }
+		 */
+	 
+	    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	            throws ServletException, IOException {
+	        String email = request.getParameter("email");
+	        String password = request.getParameter("password");
+	         
+	        UserDetailsDAO userDao = new UserDetailsDAO();
+	         
+	        UserDetails user = null;
+			try {
+				user = userDao.checkLogin(user);
+			} catch (CMSException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			String destPage = "login.jsp";
+			 
+			if (user != null) {
+			    HttpSession session = request.getSession();
+			    session.setAttribute("user", user);
+			    destPage = "home.jsp";
+			} else {
+			    String message = "Invalid email/password";
+			    request.setAttribute("message", message);
+			}
+			 
+			RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+			dispatcher.forward(request, response);
+	    
+	}
+	private String adminLogin(HttpServletRequest request, HttpServletResponse response) {
+		return "";
+	}
+
+	
+}

@@ -1,0 +1,53 @@
+package com.iiht.evaluation.coronokit.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.iiht.evaluation.coronokit.dao.UserDao;
+import com.iiht.evaluation.coronokit.dao.UserDetailsDAO;
+import com.iiht.evaluation.coronokit.model.UserDetails;
+
+
+import java.sql.*;
+ 
+public class UserDAO {
+ 
+    public UserDetails checkLogin(String email, String password) throws SQLException,
+            ClassNotFoundException {
+        String jdbcURL = "jdbc:mysql://localhost:3306/bookshop";
+        String dbUser = "root";
+        String dbPassword = "password";
+ 
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+        String sql = "SELECT * FROM users WHERE email = ? and password = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, email);
+        statement.setString(2, password);
+ 
+        ResultSet result = statement.executeQuery();
+ 
+        UserDetails user = null;
+ 
+        if (result.next()) {
+            user = new UserDetails(dbUser, dbPassword);
+            user.setUsername(dbUser);
+            user.setPassword(dbPassword);
+        }
+ 
+        connection.close();
+ 
+        return user;
+    }
+}

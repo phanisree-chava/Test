@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Corona Kit-Home</title>
+</head>
+<body>
+<div>
+<jsp:include page="header.jsp"/>
+<hr/>
+	<h2>Admin Login</h2>
+	<form action="admin" method="post">
+	     <label for="email">Email:</label>
+            <input name="email" size="30" />
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" size="30" />
+            
+            <br><br>           
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+<div>
+	<a href="user?action=newuser"><button>NewUser</button></a>
+</div>
